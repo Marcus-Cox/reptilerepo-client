@@ -4,7 +4,7 @@ function App() {
   return (
     <div>
       <h1>My List</h1>
-      <Todo />
+      <Todo text='Figure This Bullshit out' />
     </div>
   );
 }
