@@ -1,6 +1,13 @@
-function Todo(props) {
-  function deleteHandler() {
+import { useState } from "react";
 
+import Modal from "./Modal";
+import Backdrop from "./Backdrop";
+
+function Todo(props) {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  function deleteHandler() {
+    setModalIsOpen(true);
   }
   return (
     <div className="card">
@@ -10,6 +17,9 @@ function Todo(props) {
           Delete
         </button>
       </div>
+      {modalIsOpen && <Modal />}
+      {modalIsOpen && <Backdrop />}
+      {/* the && is a logical and opperator that checks if both conditions are true and if they are the second value is returned */}
     </div>
   );
 }
