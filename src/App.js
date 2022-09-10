@@ -1,4 +1,11 @@
+import Todo from "./components/Todo";
+
 function App() {
-  return <div>Welcome to Hell</div>;
+  return (
+    <div>
+      <h1>My List</h1>
+      <Todo />
+    </div>
+  );
 }
 export default App;
